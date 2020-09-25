@@ -8,12 +8,10 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage
 import org.json.JSONObject
 import java.io.File
 
-class XposedHooks : IXposedHookLoadPackage, IXposedHookZygoteInit {
+class XposedHooks : IXposedHookLoadPackage {
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
         fixSafetynet(lpparam)
     }
-
-    override fun initZygote(startupParam: IXposedHookZygoteInit.StartupParam) {}
 
     private fun fixSafetynet(lpparam: XC_LoadPackage.LoadPackageParam) {
         if (lpparam.packageName == "android") {
