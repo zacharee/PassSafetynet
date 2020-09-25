@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Pass Safetynet</string>
+
+    <string name="module_description">Pass Safetynet even without Magisk Hide.</string>
+</resources>
